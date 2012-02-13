@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = SimpleFormFancyUploads::VERSION
   s.authors     = ["Andrea Pavoni"]
   s.email       = ["andrea.pavoni@gmail.com"]
-  s.homepage    = "http://andreapavoni.com"
+  s.homepage    = "http://github.com/apeacox/simple_form_fancy_uploads"
   s.summary     = "simple_form custom inputs to get image/link previews with file uploads."
   s.description = "Use simple_form (>= v2.0) custom inputs to get image previews or a link to uploaded file. Save time and code when you need useful file uploads."
 
