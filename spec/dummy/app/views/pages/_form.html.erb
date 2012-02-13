@@ -1,0 +1,11 @@
+<%= simple_form_for @page do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :image, as: :image_preview %>
+  <%= f.input :remove_image, as: :boolean if f.object.image? %>
+  <%= f.input :attachment, as: :attachment_preview %>
+  <%= f.input :remove_attachment, as: :boolean if f.object.attachment? %>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
