@@ -30,14 +30,13 @@ Here's a basic example, as you can see, it's just a matter of specify the input 
 <% end %>
 ```
 
-
-
-## Dependencies
+### Dependencies
 
 To get it work, you need:
+
 * [simple_form](https://github.com/plataformatec/simple_form) >= v2.0 (*repetita iuvant*)
 * [carrierwave](https://github.com/jnicklas/carrierwave) actually it's the most opinionated gem for uploads (thank you paperclip for the good times, but you know... life goes on)
-* ruby 1.9.x
+* ruby 1.9+
 
 ### Testing
 
@@ -45,7 +44,7 @@ To get it work, you need:
 * run `bundle install`
 * run `rspec spec`
 
-### Contributions & Bugs
+## Contributions & Bugs
 
 * *the easy way:* go to [issues](issues/) page and blame me.
 * *the hard way:* repeat the above points, then show your power and send a pull request.
