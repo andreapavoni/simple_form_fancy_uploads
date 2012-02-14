@@ -16,7 +16,7 @@ There're only two new file inputs:
 
 ### Install
 
-Simply add `simple_form_fancy_uploads` to your `Gemfile`
+Simply add `gem simple_form_fancy_uploads` to your `Gemfile`
 
 ### Usage
 
