@@ -9,24 +9,28 @@ This gem uses the new simple_form 2.0 ability to write your own form tags (check
 
 There're only two new file inputs:
 
-* ImagePreview: guess what? when you edit an entry that contains an uploaded image, it will be shown (how many times did you this in a CMS?)
-* AttachmentPreview: this is a generic upload field, it will show a direct link to the file, so you can check *what* was uploaded.
+* `ImagePreview`: guess what? when you edit an entry that contains an uploaded image, it will be shown (how many times did you this in a CMS?)
+* `AttachmentPreview`: this is a generic upload field, it will show a direct link to the file, so you can check *what* was uploaded.
 
 ## How it works
 
 ### Install
 
-Simply add `gem simple_form_fancy_uploads` to your `Gemfile`
+Simply add `gem 'simple_form_fancy_uploads'` to your `Gemfile` and run `bundle install`
 
 ### Usage
 
-Here's a basic example, as you can see, it's just a matter of specify the input as `image_preview` or `attachment_preview`. On the image case, you can also specify a `:preview_size` inside the `:input_html` Hash, so you can show a custom version generated with Carrierwave. Nice, isn't it?
+Here's a basic example, as you can see, it's just a matter of specify the input as `:image_preview` or `:attachment_preview`. If using `:image_preview`, you can also specify a `:preview_size => :some_version_name` inside the `:input_html` Hash. This will let you to show a custom version generated with Carrierwave. Nice, isn't it?
 
 ```
 <%= simple_form_for @some_model do |f| %>
-  <!-- we specify the new custom input, and we'll use the 'thumb' version of the carrierwave upload -->
-  <%= f.input :some_image_field, :as => :image_preview, :input_html => {:preview_size => :thumb} %>
-  <%= f.input :some_attachment_field, :as => :attachment_preview %>
+  <!-- we specify that this is an image form upload input, and we want to show the 'thumb' version
+  of the carrierwave upload to not break our layout with a non-resized image -->
+  <%= f.input :some_image_field, as: image_preview:, input_html: {preview_size: :thumb} %>
+
+  <!-- here's a *normal* attachment. with this input, a link to the filename will be shown
+  if there's an uploaded file -->
+  <%= f.input :some_attachment_field, as: :attachment_preview %>
 <% end %>
 ```
 
@@ -36,7 +40,7 @@ To get it work, you need:
 
 * [simple_form](https://github.com/plataformatec/simple_form) >= v2.0 (*repetita iuvant*)
 * [carrierwave](https://github.com/jnicklas/carrierwave) actually it's the most opinionated gem for uploads (thank you paperclip for the good times, but you know... life goes on)
-* ruby 1.9+
+* ruby 1.9+ (it uses some 1.9's syntax)
 
 ### Testing
 
