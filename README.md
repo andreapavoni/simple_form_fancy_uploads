@@ -26,7 +26,7 @@ Here's a basic example, as you can see, it's just a matter of specify the input 
 <%= simple_form_for @some_model do |f| %>
   <!-- we specify that this is an image form upload input, and we want to show the 'thumb' version
   of the carrierwave upload to not break our layout with a non-resized image -->
-  <%= f.input :some_image_field, as: image_preview:, input_html: {preview_size: :thumb} %>
+  <%= f.input :some_image_field, as: :image_preview, input_html: {preview_size: :thumb} %>
 
   <!-- here's a *normal* attachment. with this input, a link to the filename will be shown
   if there's an uploaded file -->
