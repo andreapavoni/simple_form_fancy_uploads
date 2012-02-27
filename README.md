@@ -20,13 +20,13 @@ Simply add `gem 'simple_form_fancy_uploads'` to your `Gemfile` and run `bundle i
 
 ### Usage
 
-Here's a basic example, as you can see, it's just a matter of specify the input as `:image_preview` or `:attachment_preview`. If using `:image_preview`, you can also specify a `:preview_size => :some_version_name` inside the `:input_html` Hash. This will let you to show a custom version generated with Carrierwave. Nice, isn't it?
+Here's a basic example, as you can see, it's just a matter of specify the input as `:image_preview` or `:attachment_preview`. If using `:image_preview`, you can also specify a `:preview_version => :some_version_name` inside the `:input_html` Hash. This will let you to show a custom version generated with Carrierwave. Nice, isn't it?
 
 ```
 <%= simple_form_for @some_model do |f| %>
   <!-- we specify that this is an image form upload input, and we want to show the 'thumb' version
   of the carrierwave upload to not break our layout with a non-resized image -->
-  <%= f.input :some_image_field, as: :image_preview, input_html: {preview_size: :thumb} %>
+  <%= f.input :some_image_field, as: :image_preview, input_html: {preview_version: :thumb} %>
 
   <!-- here's a *normal* attachment. with this input, a link to the filename will be shown
   if there's an uploaded file -->
