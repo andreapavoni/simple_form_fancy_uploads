@@ -17,6 +17,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.1"
 
-  s.add_dependency "simple_form", "~> 2.0.0.rc"
+  s.add_dependency "simple_form", "~> 2.0.1"
   s.add_dependency "carrierwave"
 end
