@@ -4,6 +4,7 @@
   <%= f.input :remove_image, as: :boolean if f.object.image? %>
   <%= f.input :attachment, as: :attachment_preview %>
   <%= f.input :remove_attachment, as: :boolean if f.object.attachment? %>
+  <%= f.input :avatar, as: :image_preview, use_default_url: true %>
 
   <div class="actions">
     <%= f.button :submit %>

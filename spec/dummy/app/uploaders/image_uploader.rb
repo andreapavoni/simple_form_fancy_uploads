@@ -18,4 +18,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg png)
   end
 
+  def default_url
+    "fancy-upload-default-url.png"
+  end
 end

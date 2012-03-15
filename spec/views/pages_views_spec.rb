@@ -38,6 +38,10 @@ describe "pages/edit" do
     it "contains image preview" do
       rendered.should have_selector 'img[alt=Rails]'
     end
+
+    it "should fallback to default_url if specified" do
+      rendered.should have_selector 'img[alt=Fancy-upload-default-url]'
+    end
   end # uploaded image
 
   context "uploaded attachment" do
