@@ -21,6 +21,7 @@ Simply add `gem 'simple_form_fancy_uploads'` to your `Gemfile` and run `bundle i
 ### Usage
 
 Here's a basic example, as you can see, it's just a matter of specify the input as `:image_preview` or `:attachment_preview`. If using `:image_preview`, you can also specify a `:preview_version => :some_version_name` inside the `:input_html` Hash. This will let you to show a custom version generated with Carrierwave. Nice, isn't it?
+The default configuration of this gem is to not use `the default_url` method of carrierwave, if you want to show the default image defined in your upload class, you can use `:use_default_url => true` in the options hash.
 
 ```
 <%= simple_form_for @some_model do |f| %>
