@@ -40,7 +40,7 @@ describe "pages/edit" do
     end
 
     it "should fallback to default_url if specified" do
-      rendered.should have_selector 'img[alt=Fancy-upload-default-url]'
+      rendered.should have_selector 'img[alt="Fancy upload default url"]'
     end
   end # uploaded image
 
