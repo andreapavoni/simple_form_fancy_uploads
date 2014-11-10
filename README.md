@@ -56,4 +56,4 @@ To get it work, you need:
 * *the hard way:* repeat the above points, then show your power and send a pull request.
 
 ## License
-Copyright (c) 2012 Andrea Pavoni http://andreapavoni.com
+Copyright (c) 2014 Andrea Pavoni http://andreapavoni.com
