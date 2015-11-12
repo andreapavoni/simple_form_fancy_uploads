@@ -6,3 +6,5 @@ module SimpleFormFancyUploads
 end
 
 SimpleForm::Inputs.send(:include, SimpleFormFancyUploads)
+SimpleForm::FormBuilder.map_type :image_preview, to: SimpleForm::Inputs::ImagePreviewInput
+SimpleForm::FormBuilder.map_type :attachment_preview, to: SimpleForm::Inputs::AttachmentPreviewInput
