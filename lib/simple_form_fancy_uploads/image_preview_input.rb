@@ -8,6 +8,7 @@ module SimpleFormFancyUploads
       if object.send("#{attribute_name}?") || use_default_url
         out << template.image_tag(object.send(attribute_name).tap {|o| break o.send(version) if version}.send('url'))
       end
+      out << @builder.input("#{attribute_name}_cache",as: 'hidden')
       (out << super).html_safe
     end
   end
