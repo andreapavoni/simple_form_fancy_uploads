@@ -36,6 +36,14 @@ If you need to fallback on Carrierwave's `#default_url` method to show a default
 <% end %>
 ```
 
+If you want, you can pass the `preview_url` to the image on the input_html options. This might be useful when you don't have a model binded to the form.
+
+```
+<%= simple_form_for :user do |f| %>
+  <%= f.input :image, as: :image_preview, input_html: { preview_url: image_url } %>
+<% end %>
+```
+
 ### Dependencies
 
 To get it work, you need:
