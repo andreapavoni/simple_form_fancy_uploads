@@ -5,18 +5,15 @@ end
 
 ENV["RAILS_ENV"] = "test"
 
+puts `cd #{__dir__}/dummy && RAILS_ENV=test bin/rake db:migrate`
+exit $?.exitstatus unless $?.success?
+
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 require "rspec/rails"
-require "webrat"
+require "capybara/rspec"
 
 Rails.backtrace_cleaner.remove_silencers!
-
-ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__)
-
-Webrat.configure do |config|
-  config.mode = :rails
-end
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }

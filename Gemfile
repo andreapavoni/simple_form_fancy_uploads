@@ -8,7 +8,7 @@ gemspec
 group :development, :test do
   gem 'simplecov', require: false
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 2.14.0'
-  gem 'webrat'
+  gem 'rspec-rails', '~> 3.8'
+  gem 'capybara'
+  gem 'rails-controller-testing'
 end
-
