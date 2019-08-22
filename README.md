@@ -1,9 +1,9 @@
 # SimpleForm fancy uploads
 
-A set of [simple_form](https://github.com/plataformatec/simple_form) (~> 3.1) custom inputs to get image previews or a link to
+A set of [simple_form](https://github.com/plataformatec/simple_form) (~> 4.1) custom inputs to get image previews or a link to
 uploaded file.
 
-This gem uses the new simple_form 3.1 ability to write your own form tags (check the [simple_form-bootstrap](https://github.com/rafaelfranca/simple_form-bootstrap) example). In 90% of cases, you need some kind of preview when it comes to uploaded files (avatar, images, docs, etc..), why should I write the same markup each time?
+This gem uses the simple_form ability to write your own form tags (check the [simple_form-bootstrap](https://github.com/rafaelfranca/simple_form-bootstrap) example). In 90% of cases, you need some kind of preview when it comes to uploaded files (avatar, images, docs, etc..), why should I write the same markup each time?
 
 ## What you get
 
@@ -48,9 +48,9 @@ If you want, you can pass the `preview_url` to the image on the input_html optio
 
 To get it work, you need:
 
-* [simple_form](https://github.com/plataformatec/simple_form) ~> 3.1 (*repetita iuvant*)
+* [simple_form](https://github.com/plataformatec/simple_form) ~> 4.1 (*repetita iuvant*)
 * [carrierwave](https://github.com/jnicklas/carrierwave) actually it's the most opinionated gem for uploads (thank you paperclip for the good times, but you know... life goes on)
-* ruby 1.9+ (it uses some 1.9's syntax)
+* ruby 2.2.2+
 
 ### Testing
 
