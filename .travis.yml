@@ -4,6 +4,8 @@ rvm:
   - 2.7.0
 
 before_install:
-  # https://github.com/danmayer/coverband/issues/162#issuecomment-452173268
-  - rm /home/travis/.rvm/gems/*/specifications/bundler-2.*.gemspec || true
-  - gem install bundler -v '<2'
+  - yes | gem update --system --force
+  - gem install bundler
+
+install:
+  - bundle install --jobs=3 --retry=3
