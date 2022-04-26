@@ -24,7 +24,7 @@ Here's a basic example, as you can see, it's just a matter of specify the input 
 
 If you need to fallback on Carrierwave's `#default_url` method to show a default image defined in your upload class, set `:use_default_url => true` in the options hash.
 
-```
+```erb
 <%= simple_form_for @some_model do |f| %>
   <!-- we specify that this is an image form upload input, and we want to show the 'thumb' version
   of the carrierwave upload to not break our layout with a non-resized image -->
@@ -38,7 +38,7 @@ If you need to fallback on Carrierwave's `#default_url` method to show a default
 
 If you want, you can pass the `preview_url` to the image on the input_html options. This might be useful when you don't have a model binded to the form.
 
-```
+```erb
 <%= simple_form_for :user do |f| %>
   <%= f.input :image, as: :image_preview, input_html: { preview_url: image_url } %>
 <% end %>
